@@ -29,5 +29,11 @@ urlpatterns = [
     path('about/', views.about),
     path('about/<int:author_no>', views.about),
     path('info/', include(myurlPatterns)),
+    path('mul/<int:x>/<int:y>/', views.mul),
+    path('list/<int:yr>/<int:mon>/<int:day>/', views.listing, name='list-url'),
+    path('F/<int:tem>/', views.temF, name='tempF-url'),
+    path('C/<int:tem>/', views.temC, name='tempC-url'),
+    path('post/<int:yr>/<int:mon>/<int:day>/<int:post_num>/', views.post, name='post-url'),
+    path('post2/<int:yr>/<int:mon>/<int:day>/<int:post_num>/', views.post2, name='post-url-2'),
 ]
 
